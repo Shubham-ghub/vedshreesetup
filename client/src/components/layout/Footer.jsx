@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Logo from '../../assets/leaf.png'
 import { Leaf, Facebook, Instagram, Twitter, Mail, Phone, MapPin } from 'lucide-react';
 
 const Footer = () => {
@@ -10,7 +11,7 @@ const Footer = () => {
           {/* Brand Column */}
           <div className="flex flex-col">
             <Link to="/" className="flex items-center mb-4">
-              <Leaf className="mr-2 text-[#DCAF3B]" size={28} />
+              <img src={Logo} alt='' className="mr-2  w-10 h-10"  />
               <div>
                 <span className="font-montserrat font-bold text-xl text-white">Vedshree</span>
                 <span className="font-montserrat text-xs text-white/80 block -mt-1">Ayurvedic</span>

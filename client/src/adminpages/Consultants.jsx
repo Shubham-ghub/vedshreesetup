@@ -86,6 +86,7 @@ const consultationTypes = [
     title: "General Wellness",
     description: "A comprehensive assessment of your constitution and health concerns with personalized recommendations.",
     duration: "45 minutes",
+    day: "15",
     price: 1500,
     icon: <Leaf className="w-6 h-6" />
   },
@@ -94,6 +95,7 @@ const consultationTypes = [
     title: "Specific Concern",
     description: "Focused consultation targeting a specific health concern with targeted Ayurvedic solutions.",
     duration: "30 minutes",
+    day: "10",
     price: 1200,
     icon: <Stethoscope className="w-6 h-6" />
   },
@@ -102,6 +104,7 @@ const consultationTypes = [
     title: "Follow-Up Session",
     description: "Review your progress and make adjustments to your personalized wellness plan.",
     duration: "20 minutes",
+    day: "5",
     price: 800,
     icon: <CheckCircle className="w-6 h-6" />
   }
@@ -465,6 +468,7 @@ const Consultants = () => {
                   <p className="text-sm text-[#87a186]/80 mb-2">{type.description}</p>
                   <div className="flex items-center justify-between">
                     <span className="text-sm text-[#87a186]/70">{type.duration}</span>
+                    <span className="text-sm text-[#87a186]/70">for {type.day} days</span>
                     <span className="text-lg font-semibold text-[#0E2A10]">₹{type.price}</span>
                   </div>
                 </div>

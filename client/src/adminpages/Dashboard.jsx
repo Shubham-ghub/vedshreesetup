@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { use } from 'react';
 import { 
   ShoppingBag, Users, Tag, ArrowUp, 
   ArrowDown, Leaf, BarChart3, LineChart
@@ -6,41 +6,9 @@ import {
 import PageHeader from '../admincomponents/PageHeader';
 import Card from '../admincomponents/Card';
 import { motion } from 'framer-motion';
+import { useDispatch, useSelector } from 'react-redux';
 
-const statsCards = [
-  { 
-    title: 'Total Products', 
-    value: '128', 
-    icon: <ShoppingBag size={18} />, 
-    change: '+12%', 
-    increased: true,
-    color: 'bg-green-100 text-green-700'
-  },
-  { 
-    title: 'Categories', 
-    value: '24', 
-    icon: <Tag size={18} />, 
-    change: '+4%', 
-    increased: true,
-    color: 'bg-blue-100 text-blue-700'
-  },
-  { 
-    title: 'Consultants', 
-    value: '18', 
-    icon: <Users size={18} />, 
-    change: '+2%', 
-    increased: true,
-    color: 'bg-purple-100 text-purple-700'
-  },
-  { 
-    title: 'Consultations', 
-    value: '245', 
-    icon: <Leaf size={18} />, 
-    change: '-5%', 
-    increased: false,
-    color: 'bg-amber-100 text-amber-700'
-  },
-];
+
 
 const recentProducts = [
   { id: 1, name: 'Ashwagandha Powder', category: 'Herbs', status: 'In Stock' },
@@ -58,6 +26,54 @@ const recentConsultations = [
 ];
 
 const Dashboard = () => {
+
+  // const {getAllCategories, isloading, message, Error} = useSelector((state) => state.category);
+
+  // const {user} = useSelector((state) => state.auth);
+
+  // const dispatch = useDispatch();
+
+  const statsCards = [
+  { 
+    title: 'Total Products', 
+    value: '120', 
+    icon: <ShoppingBag size={18} />, 
+    change: '+12%', 
+    increased: true,
+    color: 'bg-green-100 text-green-700'
+  },
+  { 
+    title: 'Categories', 
+    value:  '125', 
+    icon: <Tag size={18} />, 
+    change: '+4%', 
+    increased: true,
+    color: 'bg-blue-100 text-blue-700'
+  },
+  { 
+    title: 'Consultants', 
+    value: '123', 
+    icon: <Users size={18} />, 
+    change: '+2%', 
+    increased: true,
+    color: 'bg-purple-100 text-purple-700'
+  },
+  { 
+    title: 'Consultations', 
+    value: '245', 
+    icon: <Leaf size={18} />, 
+    change: '-5%', 
+    increased: false,
+    color: 'bg-amber-100 text-amber-700'
+  },
+];
+
+// useEffect(() => {
+//   dispatch(getAllCategories());
+//   dispatch(user());
+
+// },[])
+
   return (
     <div>
       <PageHeader 
