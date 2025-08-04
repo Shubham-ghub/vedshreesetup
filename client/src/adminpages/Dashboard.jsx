@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import React, { use, useEffect } from 'react';
 import { 
   ShoppingBag, Users, Tag, ArrowUp, 
   ArrowDown, Leaf, BarChart3, LineChart
@@ -7,6 +7,7 @@ import PageHeader from '../admincomponents/PageHeader';
 import Card from '../admincomponents/Card';
 import { motion } from 'framer-motion';
 import { useDispatch, useSelector } from 'react-redux';
+import { getallUser } from '../features/admin/adminSlice';
 
 
 
@@ -27,28 +28,41 @@ const recentConsultations = [
 
 const Dashboard = () => {
 
-  // const {getAllCategories, isloading, message, Error} = useSelector((state) => state.category);
+  const {allUsers, Categories, Products, adminLoading, adminSuccess, adminError,adminErrrorMessage} = useSelector((state) => state.admin);
 
-  // const {user} = useSelector((state) => state.auth);
+  
 
-  // const dispatch = useDispatch();
+  // console.log('first Username', allUsers);
+  // console.log('first Categories', Categories);
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {dispatch(getallUser())}, []);
 
   const statsCards = [
-  { 
-    title: 'Total Products', 
-    value: '120', 
-    icon: <ShoppingBag size={18} />, 
-    change: '+12%', 
+    { 
+    title:' Total Users', 
+    value:  allUsers.length,
+    icon: <Users size={18} />, 
+    change: '+4%', 
     increased: true,
-    color: 'bg-green-100 text-green-700'
+    color: 'bg-blue-100 text-blue-700'
   },
-  { 
-    title: 'Categories', 
-    value:  '125', 
+   { 
+    title: 'Total Categories', 
+    value:  Categories.length,
     icon: <Tag size={18} />, 
     change: '+4%', 
     increased: true,
     color: 'bg-blue-100 text-blue-700'
+  },
+  { 
+    title: 'Total Products', 
+    value: Products.length, 
+    icon: <ShoppingBag size={18} />, 
+    change: '+12%', 
+    increased: true,
+    color: 'bg-green-100 text-green-700'
   },
   { 
     title: 'Consultants', 
@@ -67,12 +81,6 @@ const Dashboard = () => {
     color: 'bg-amber-100 text-amber-700'
   },
 ];
-
-// useEffect(() => {
-//   dispatch(getAllCategories());
-//   dispatch(user());
-
-// },[])
 
   return (
     <div>

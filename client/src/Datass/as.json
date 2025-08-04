@@ -1,0 +1,65 @@
+[
+    {
+        "_id": "688283128c0eeac807f3a719",
+        "name": "Herbs",
+        "description": "Pure ayurvedic herbs and plant extracts",
+        "isAvailable": true,
+        "createdAt": "2025-07-24T19:01:38.160Z",
+        "updatedAt": "2025-07-24T19:01:38.160Z",
+        "__v": 0
+    },
+    {
+        "_id": "6882834b8c0eeac807f3a71c",
+        "name": "Supplements",
+        "description": "Dietary supplements and vitamins",
+        "isAvailable": true,
+        "createdAt": "2025-07-24T19:02:35.870Z",
+        "updatedAt": "2025-07-24T19:02:35.870Z",
+        "__v": 0
+    },
+    {
+        "_id": "688283718c0eeac807f3a71f",
+        "name": "Oils",
+        "description": "Therapeutic and massage oils",
+        "isAvailable": true,
+        "createdAt": "2025-07-24T19:03:13.056Z",
+        "updatedAt": "2025-07-24T19:03:13.056Z",
+        "__v": 0
+    },
+    {
+        "_id": "688283948c0eeac807f3a722",
+        "name": "Teas",
+        "description": "Herbal tea blends and infusions",
+        "isAvailable": true,
+        "createdAt": "2025-07-24T19:03:48.445Z",
+        "updatedAt": "2025-07-24T19:03:48.445Z",
+        "__v": 0
+    },
+    {
+        "_id": "688283b08c0eeac807f3a725",
+        "name": "Spices",
+        "description": "Medicinal spices and powders",
+        "isAvailable": true,
+        "createdAt": "2025-07-24T19:04:16.792Z",
+        "updatedAt": "2025-07-24T19:04:16.792Z",
+        "__v": 0
+    },
+    {
+        "_id": "688283db8c0eeac807f3a728",
+        "name": "Wellness",
+        "description": "General wellness and health products",
+        "isAvailable": true,
+        "createdAt": "2025-07-24T19:04:59.506Z",
+        "updatedAt": "2025-07-24T19:04:59.506Z",
+        "__v": 0
+    },
+    {
+        "_id": "6887b8455cc3dc3762765f79",
+        "name": "Herbsssss and olissss",
+        "description": "are both good",
+        "isAvailable": true,
+        "createdAt": "2025-07-28T17:49:57.727Z",
+        "updatedAt": "2025-07-28T17:49:57.727Z",
+        "__v": 0
+    }
+]
