@@ -4,7 +4,6 @@ import { Plus, Edit, Trash2, Search, Filter } from 'lucide-react';
 import PageHeader from '../admincomponents/PageHeader';
 import Card from '../admincomponents/Card';
 import { motion } from 'framer-motion';
-import { set } from 'mongoose';
 import { addCategory, getAllCategories, updateCategory } from '../features/admin/adminSlice';
 
 
