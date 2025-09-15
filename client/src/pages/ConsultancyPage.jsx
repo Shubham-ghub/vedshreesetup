@@ -6,7 +6,7 @@ import { doctors } from '../data/doctors';
 
 const consultationTypes = [
   {
-    id: "general",
+    id: 1,
     title: "General Wellness",
     description: "A comprehensive assessment of your constitution and health concerns with personalized recommendations.",
     duration: "45 minutes",
@@ -14,7 +14,7 @@ const consultationTypes = [
     icon: <Leaf className="w-6 h-6" />
   },
   {
-    id: "specific",
+    id: 2,
     title: "Specific Concern",
     description: "Focused consultation targeting a specific health concern with targeted Ayurvedic solutions.",
     duration: "30 minutes",
@@ -22,7 +22,7 @@ const consultationTypes = [
     icon: <Stethoscope className="w-6 h-6" />
   },
   {
-    id: "followup",
+    id: 3,
     title: "Follow-Up Session",
     description: "Review your progress and make adjustments to your personalized wellness plan.",
     duration: "20 minutes",
@@ -33,7 +33,7 @@ const consultationTypes = [
 
 const ConsultancyPage = () => {
   const [selectedDoctor, setSelectedDoctor] = useState("");
-  const [selectedType, setSelectedType] = useState("general");
+  const [selectedType, setSelectedType] = useState(1);
   const [formData, setFormData] = useState({
     name: '',
     email: '',

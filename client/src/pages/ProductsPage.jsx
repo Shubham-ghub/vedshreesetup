@@ -20,13 +20,10 @@ const ProductsPage = () => {
     // Filter by search query
     if (searchQuery) {
       const query = searchQuery.toLowerCase();
-      result = result.filter(
-        product => 
-          product.name.toLowerCase().includes(query) || 
-          product.description.toLowerCase().includes(query)
-      );
+      result = result.filter(product => 
+        product.name.toLowerCase().includes(query) || 
+        product.description.toLowerCase().includes(query));
     }
-    
     setFilteredProducts(result);
   }, [selectedCategory, searchQuery]);
 
